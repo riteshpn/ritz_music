@@ -37,7 +37,7 @@ dependencies:
   cupertino_icons: ^1.0.2
   flutter_svg: ^2.0.9
   carousel_slider: ^4.2.1
-  syncfusion_flutter_gauges: ^23.1.42
+  syncfusion_flutter_gauges: ^23.1.43
   on_audio_query: ^2.9.0
   permission_handler: ^11.0.1
   just_audio: ^0.9.35
