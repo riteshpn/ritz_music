@@ -10,9 +10,9 @@ class TrendingSongSlider extends StatelessWidget {
   Widget build(BuildContext context) {
     List<Widget> sliderItem = [
       Container(
-          padding: EdgeInsets.all(20),
+          padding: const EdgeInsets.all(20),
           decoration: BoxDecoration(
-            image: DecorationImage(
+            image: const DecorationImage(
               image: AssetImage("assets/images/cover.jpg"),
               fit: BoxFit.cover,
             ),
@@ -27,14 +27,14 @@ class TrendingSongSlider extends StatelessWidget {
                     Row(
                       children: [
                         Container(
-                          padding: EdgeInsets.all(10),
+                          padding: const EdgeInsets.all(10),
                           decoration: BoxDecoration(
                               color: divColor,
                               borderRadius: BorderRadius.circular(30)),
                           child: Row(
                             children: [
                               SvgPicture.asset("assets/icons/music_node.svg"),
-                              SizedBox(
+                              const SizedBox(
                                 width: 10,
                               ),
                               Text(
@@ -46,8 +46,8 @@ class TrendingSongSlider extends StatelessWidget {
                         ),
                       ],
                     ),
-                    Spacer(),
-                    Row(
+                    const Spacer(),
+                    const Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         Text(
@@ -59,7 +59,7 @@ class TrendingSongSlider extends StatelessWidget {
                         )
                       ],
                     ),
-                    Row(
+                    const Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         Text(
@@ -89,8 +89,8 @@ class TrendingSongSlider extends StatelessWidget {
           enableInfiniteScroll: true,
           reverse: false,
           autoPlay: true,
-          autoPlayInterval: Duration(seconds: 6),
-          autoPlayAnimationDuration: Duration(milliseconds: 800),
+          autoPlayInterval: const Duration(seconds: 6),
+          autoPlayAnimationDuration: const Duration(milliseconds: 800),
           autoPlayCurve: Curves.fastOutSlowIn,
           enlargeCenterPage: true,
           enlargeFactor: 0.3,

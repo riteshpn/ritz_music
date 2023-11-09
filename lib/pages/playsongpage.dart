@@ -3,7 +3,7 @@ import 'package:ritz_player/componets/playsongheaderbutton.dart';
 import 'package:ritz_player/componets/songandvolume.dart';
 import 'package:ritz_player/componets/songcontrollerbutton.dart';
 import 'package:ritz_player/componets/songsDetails.dart';
-import 'package:ritz_player/componets/songwave.dart';
+
 
 class PlaySongPage extends StatelessWidget {
   const PlaySongPage({super.key});
