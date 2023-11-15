@@ -1,11 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:get/get.dart';
+import 'package:ritz_player/controller/songplayercontroller.dart';
 
 class SongDetails extends StatelessWidget {
-  const SongDetails({super.key});
+  const SongDetails({
+    super.key,
+  });
 
   @override
   Widget build(BuildContext context) {
+    SongPlayerController songPlayerController = Get.put(SongPlayerController());
     return Column(
       children: [
         Row(
@@ -28,10 +33,14 @@ class SongDetails extends StatelessWidget {
         Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-            Text(
-              "Dhaagon Se Baandhaa",
-              style: Theme.of(context).textTheme.bodyLarge,
-            ),
+            Flexible(
+                child: Obx(
+              () => Text(
+                "${songPlayerController.songTitle.value}",
+                style: Theme.of(context).textTheme.bodyLarge,
+                maxLines: 1,
+              ),
+            )),
             Row(
               children: [
                 // SvgPicture.asset(
@@ -51,15 +60,17 @@ class SongDetails extends StatelessWidget {
         const SizedBox(
           height: 10,
         ),
-        Row(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children: [
-            Text(
-              "Arijit Singh",
-              style: Theme.of(context).textTheme.bodySmall,
-            ),
-          ],
-        ),
+        Obx(
+          () => Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              Text(
+                "${songPlayerController.songArtist.value}",
+                style: Theme.of(context).textTheme.bodySmall,
+              ),
+            ],
+          ),
+        )
       ],
     );
   }

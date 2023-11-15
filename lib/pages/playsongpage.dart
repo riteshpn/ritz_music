@@ -6,11 +6,14 @@ import 'package:ritz_player/componets/songsDetails.dart';
 
 
 class PlaySongPage extends StatelessWidget {
-  const PlaySongPage({super.key});
+
+  
+  const PlaySongPage({super.key,  });
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
+    var value = 20.0;
+    return  Scaffold(
       body: SafeArea(
         child: Padding(
           padding: EdgeInsets.all(8.0),
@@ -21,7 +24,10 @@ class PlaySongPage extends StatelessWidget {
               SizedBox(height: 10),
               SongAndVolume(),
               SizedBox(height: 40),
-              SongDetails(),
+              SongDetails(
+                
+
+              ),
               SizedBox(height: 10),
               Spacer(),
               SongsControllerButtons()
